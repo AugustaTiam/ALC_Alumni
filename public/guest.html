@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="left-nav">
+            <a class="active" href="guest.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="/resources.html" onmouseover="showTooltip('resourcesTooltip')" onmouseout="hideTooltip('resourcesTooltip')"
+            id="resourcesLink">Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        
+
+        <div class="right-nav">
+            <a href="signup.html">signup</a>
+            <img src="/logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 10%;">
+        </div>
+    </nav>
+
+    <h1>Welcome to ALC-Connect</h1>
+
+    <div class="content_ind">
+
+        <div class="box_ind">
+            <div style="flex: 0 0 40%;">
+                <img src="/asante-124.jpg" alt="Image 1"
+                    style="width: 70%; border-radius: 10%;">
+            </div>
+            <div style="flex: 1;">
+                <h2>Goal</h2>
+                <p>* Provide a platform for alumni to exchange ideas, experiences, and career advice</p>
+                <p>* Offer a space for alumni to share and access resources related to career development, job
+                    opportunities, and industry trends</p>
+                <p>* Enable the alumni manager to maintain and update the database of alumni records efficiently</p>
+            </div>
+        </div>
+
+        <div class="box_ind">
+            <div style="flex: 0 0 60%; margin-right: 20px;">
+                <h2>Why ALC-Connect</h2>
+                <p>ALC-Connect stands as the dedicated nexus for our alumni community, providing a
+                    personalized and purpose-driven platform that transcends generic social networks.
+                    ALC-Connect is not merely a networking space but a
+                    dynamic hub fostering professional growth. Offering robust event management across
+                    categories like professional development, networking, and campus events, ALC-Connect
+                    empowers alumni to seamlessly organize, modify, and attend events.</p>
+
+                <p>Our streamlined alumni records management ensures accurate profiles. With an intuitive interface
+                    catering to users of all technical backgrounds, ALC-Connect represents the evolution of
+                    alumni engagement a vibrant space where our community can connect meaningfully, celebrate
+                    achievements, and advance together.</p>
+            </div>
+            <div style="flex: 1;">
+                <img src="/stud.jpg" alt="Image 2"
+                    style="width: 80%; border-radius: 10%;">
+            </div>
+        </div>
+
+        <div class="box_ind">
+            <div style="flex: 0 0 40%;">
+                <img src="/me.jpg" alt="Image 3"
+                    style="width: 60%; border-radius: 10%;">
+            </div>
+            <div style="flex: 1;">
+                <h2>Author</h2>
+                <p>Name: Augusta Lynn Tiam</p>
+                <p>Country of Origin: Cameroon</p>
+                <p>University: African Leadership College</p>
+                <p>Degree: Computing</p>
+
+                <p>Mission: With a deep passion for STEM,
+                    my mission is to utilize technology
+                    as a catalyst for enhancing the
+                    educational system in Cameroon.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="resourcesTooltip">Log in to access feature</div>
+    
+    <script>
+        // Assume you have a variable isLoggedIn that is true if the user is logged in, false otherwise
+        const isLoggedIn = false; // Replace this with your actual login status check
+    
+ // Function to show tooltip on hover
+function showTooltip(id) {
+    const tooltip = document.getElementById(id);
+    tooltip.style.visibility = 'visible';
+
+    // If the user is not logged in, show the tooltip message
+    if (!isLoggedIn) {
+        tooltip.innerText = 'Log in to access feature';
+    }
+}
+
+// Function to hide tooltip on hover out
+function hideTooltip(id) {
+    const tooltip = document.getElementById(id);
+    tooltip.style.visibility = 'hidden';
+
+    // Reset the tooltip text
+    tooltip.innerText = '';
+}
+    </script>
+
+    <footer>
+        <div class="left-footer">
+            <a href="guest.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <img src="/logo.png" alt="Logo" style="height: 60px; width: 60px; border-radius: 10%;">
+        <p>&copy; 2023 ALC-Connect. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

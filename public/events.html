@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline';"> -->
+    <link rel="stylesheet" type="text/css" href="/css/event.css">
+    <script src="js/main.js"></script>
+    <script src="js/logout.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="left-nav">
+            <a href="index.html">Home</a>
+            <a class="active" href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="right-nav">
+            <button id="updateButton" onclick="logout()">Logout</button>
+            <img src="/images/logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 10%;">
+        </div>
+    </nav>
+
+    <h1>Event List</h1>
+
+    <!-- Add a button to open the modal -->
+    <button id="updateButton" onclick="openAddEventModal()">Add Event</button>
+
+    <!-- Add a modal for adding a new event -->
+    <div id="addEventModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddEventModal()">&times;</span>
+
+            <!-- Add your form for adding a new event -->
+            <form onsubmit="submitEventForm()" id="addEventForm" method="POST">
+
+                <label for="title">Event Details</label>
+                <input type="text" id="title" placeholder="Title" name="title" required>
+
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="Description" name="description" required>
+
+                <select id="categorySelect" name="category" required>
+                    <option value="" selected>-- Choose a Category --</option>
+                    <option value="Professional Development">Professional Development</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Campus Event">Campus Event</option>
+                </select> <br>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" placeholder="Date" name="date" required>
+
+                <button id="updateButton" type="submit" >Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add a modal for editing an event -->
+    <div id="editEventModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditEventModal()">&times;</span>
+
+            <!-- Form for editing an event -->
+            <form onsubmit="submitEditEventForm()" id="editEventForm" method="POST">
+                <h2>Edit Event</h2>
+
+                <!-- Event Title -->
+                <label for="title">Title</label>
+                <input type="text" id="title1" placeholder="Enter title" name="title"  required/>
+
+                <!-- Event Description -->
+                <label for="description">Description</label>
+                <textarea id="description1" placeholder="Enter description" name="description" required></textarea>
+
+                <!-- Event Category -->
+                <label for="categorySelect">Category</label>
+                <select id="categorySelect1" name="category" required>
+                    <option value="" selected disabled>-- Choose a Category --</option>
+                    <option value="Professional Development">Professional Development</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Campus Event">Campus Event</option>
+                </select>
+
+                <!-- Event Date -->
+                <label for="date">Date</label>
+                <input type="date" id="date1" name="date" required>
+
+
+                <!-- Update Button -->
+                <button id="updateButton" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="eventList"></div> <br><br><br>
+
+    <footer>
+        <div class="left-footer">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <img src="/images/logo.png" alt="Logo" style="height: 60px; width: 60px; border-radius: 10%;">
+        <p>&copy; 2023 ALC-Connect. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+    <script src="index.js" defer></script>
+    <script src="js/logout.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="left-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+            <a class="active" href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="right-nav">
+            <button id="updateButton" onclick="logout()">Logout</button>
+            <img src="/images/logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 10%;">
+        </div>
+    </nav>
+
+    <h1>Contact Us</h1>
+
+    <div class= "contact_back">
+        <form action="/contact" method="POST">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required><br>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </div> <br><br>
+
+    <div id="popup" class="popup"></div>
+
+    <footer>
+        <div class="left-footer">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <img src="/images/logo.png" alt="Logo" style="height: 60px; width: 60px; border-radius: 10%;">
+        <p>&copy; 2023 ALC-Connect. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

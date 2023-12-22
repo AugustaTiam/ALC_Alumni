@@ -1,0 +1,140 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 10px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    background-color: #013220;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+nav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+h1 {
+    color: #b3b300;
+    text-align: center;
+}
+
+.left-nav {
+    display: flex;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+#updateButton {
+    background-color: #b3b300;
+    color: #FFFFFF; 
+    padding: 10px 10px;
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#updateButton:hover {
+    background-color: #04AA6D;
+}
+
+.contact_back {
+    background-image: url('/images/grad.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.contact_back form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_back label {
+    margin-bottom: 8px;
+}
+
+.contact_back input,
+.contact_back textarea {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #013220;
+}
+
+.contact_back button {
+    width: 10%;
+    background-color: yellow;
+    color: #013220;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact_back button:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+footer {
+    background-color: #013220;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+.left-footer {
+    display: flex;
+}
+
+.right-footer {
+    display: flex;
+    align-items: center;
+}

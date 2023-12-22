@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/log.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <h1>Sign Up</h1>
+
+  <div class="container">
+    <div class="login-box">
+      <form action="/api/user/signup" method="POST">
+        <label for="userName">User Name</label>
+        <input placeholder="exp: James Bond" type="text" id="userName" name="userName" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="exp: example@example.com" required>
+
+        <label for="location">Location</label>
+        <input placeholder="exp: Port Louis" type="text" id="location" name="location" required>
+
+        <label for="yearGroup">Year Group</label>
+        <input placeholder="exp: 2021" type="text" id="yearGroup" name="yearGroup" required>
+
+        <label for="password">Password</label>
+        <input type=password id="password" name="password" required>
+
+        <button id="updateButton" type="submit">Sign Up</button>
+      </form>
+      <p>Don't have an account? <a href="/login">Log in</a></p>
+      <p>Or <a href="/guest">continue as a guest</a></p>
+    </div>
+  </div>
+
+  <div id="popup" class="popup"></div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/resources.css">
+    <script src="js/gallery.js"></script>
+    <script src="js/logout.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="left-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a class="active" href="resources.html">Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="right-nav">
+            <button id="updateButton" onclick="logout()">Logout</button>
+            <img src="/images/logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 10%;">
+        </div>
+    </nav><br>
+
+     <!-- Gallery Section -->
+     <div class="gallery-container">
+        <button class="arrow prev" onclick="changeSlide(-1)">❮</button>
+        <div class="gallery">
+            <img src="/images/img1.jpg" alt="image">
+            <img src="/images/img2.jpg" alt="image">
+            <img src="/images/img3.jpg" alt="image">
+            <img src="/images/img4.jpg" alt="image">
+            <img src="/images/img5.jpeg" alt="image">
+            <img src="/images/img6.jpg" alt="image">
+            <img src="/images/img7.jpg" alt="image">
+            <img src="/images/img8.jpg" alt="image">
+            <img src="/images/img9.JPG" alt="image">
+            <img src="/images/img10.jpg" alt="image">
+            <img src="/images/img11.jpg" alt="image">
+            <img src="/images/img12.jpg" alt="image">
+        </div>
+        <button class="arrow next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <div class="content_res">        
+        <div class="box_res">
+                <h2>Share about A.L.U / A.L.C.</h2>
+                <a href="https://www.alueducation.com/" target="_blank">
+                    <img src="/images/alu.png" alt="Mauritius Campus Tour" style="width:70%; height:400px;">
+                </a>
+        </div>
+
+        <div class="box_res">
+                <h2>Wellness Center</h2>
+                <a href="https://wellness.alueducation.com/" target="_blank">
+                    <img src="/images/wellness.png" alt="Mauritius Campus Tour" style="width:70%; height:400px;">
+                </a>
+        </div>
+
+        <div class="box_res">
+            <h2>Mauritius Campus Tour</h2>
+            <a href="https://youtu.be/3ES0lurL03M?si=xaVsFc5DamQtwCdS" target="_blank">
+                <img src="/images/alc.png" alt="Mauritius Campus Tour" style="width:70%; height:400px;">
+            </a>
+        </div>
+        
+        <div class="box_res">
+                <h2>Opprtunity Board</h2>
+                <a href="https://opportunitiesboard.my.canva.site/" target="_blank">
+                    <img src="/images/board.png" alt="Opportunity Board" style="width:70%; height:400px;">
+                </a>
+        </div>
+    </div><br><br><br>
+
+    <footer>
+        <div class="left-footer">
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <img src="/images/logo.png" alt="Logo" style="height: 60px; width: 60px; border-radius: 10%;">
+        <p>&copy; 2023 ALC-Connect. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

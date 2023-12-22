@@ -3,11 +3,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const session = require('express-session');
 require('dotenv').config();
 
 const eventController = require('./controller/eventController');
-const userController = require('./controller/userController'); // Add this line
-
+const userController = require('./controller/userController'); 
 const userRoutes = require('./routes/userRoutes');
 const eventRouter = require('./routes/eventRoutes');
 const formSubmissionRoutes = require('./routes/formSubmissionRoutes');
@@ -15,6 +15,14 @@ const formSubmissionRoutes = require('./routes/formSubmissionRoutes');
 const app = express();
 const port = 4000;
 
+// Use express-session middleware
+app.use(
+  session({
+    secret: 'ALC_Connect1', 
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 // Middleware to parse JSON and form data
 app.use(bodyParser.json());
@@ -37,13 +45,16 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-// Set up views and static files
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// Set up public and static files
+app.set('public', path.join(__dirname, 'public'));
+app.set('public engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Catch-all route for all the pages........................................
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+app.get('/index*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 app.get('/signup*', (req, res) => {

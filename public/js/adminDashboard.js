@@ -39,8 +39,6 @@ function getElementById(id) {
     return document.getElementById(id);
 }
 
-
-
 // Function to open the edit event modal with user ID
 function openEditUserModal(userId) {
     console.log('Function called with userId:', userId);
@@ -78,27 +76,6 @@ function openEditUserModal(userId) {
         });
 }
 
-
-// function displayUsers(users) {
-//     const userListContainer = document.getElementById('userList');
-//     userListContainer.innerHTML = '';
-
-//     users.forEach(user => {
-//         const userDiv = document.createElement('div');
-//         userDiv.innerHTML = `
-//         <p>Username: ${user.userName}</p>
-//         <p>Location: ${user.location}</p>
-//         <p>Year Group: ${user.yearGroup}</p>
-//         <button class="updateButton" id="editButton-${user._id}" onclick="openEditUserModal('${user._id}')">Edit</button>
-//         <button class="updateButton" onclick="deleteUser('${user._id}')">Delete</button>
-//         <hr>
-//     `;
-    
-//         userListContainer.appendChild(userDiv);
-//     });
-// }
-
-
 function displayUsers(users) {
     const userListContainer = document.getElementById('userList');
     userListContainer.innerHTML = '';
@@ -127,48 +104,7 @@ function displayUsers(users) {
     });
 }
 
-
 let currentUserID;
-
-
-
-
-
-// // Function to submit the edit user form using AJAX
-// async function submitEditUserForm() {
-//     try {
-//         // Get form data
-//         const editUserData = {
-//             userName: document.getElementById('userName1').value,
-//             location: document.getElementById('location1').value,
-//             yearGroup: document.getElementById('yearGroup1').value,
-//         };
-
-//         console.log(editUserData);
-
-//         // Use AJAX to send the form data to update the user
-//         const response = await fetch(`/api/user/${currentUserID}/updateUser`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify(editUserData),
-//         });
-
-//         if (!response.ok) {
-//             throw new Error(`Update user failed. Status: ${response.status}`);
-//         }
-
-//         const data = await response.json();
-//         console.log('Update successful:', data);
-        
-//         // Optionally, you can reload the page or update the user list
-//         window.location.reload();
-//     } catch (error) {
-//         console.error('Error updating user:', error);
-//     }
-// }
-
 
 // Function to submit the edit user form using AJAX
 async function submitEditUserForm(event) {
@@ -204,9 +140,6 @@ async function submitEditUserForm(event) {
         console.error('Error updating user:', error);
     }
 }
-
-
-
 
 // Function to close the edit user modal
 function closeEditUserModal() {

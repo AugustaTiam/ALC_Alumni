@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
@@ -15,8 +15,9 @@
         </div>
 
         <div class="right-nav">
-            <a href="signup.html">signup</a>
-            <img src="/logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 10%;">
+            <a href="signup.html">Signup to see full features</a>
+            
+            <img src="/images/logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 10%;">
         </div>
     </nav>
 
@@ -26,7 +27,7 @@
 
         <div class="box_ind">
             <div style="flex: 0 0 40%;">
-                <img src="/asante-124.jpg" alt="Image 1"
+                <img src="/images/asante-124.jpg" alt="Image 1"
                     style="width: 70%; border-radius: 10%;">
             </div>
             <div style="flex: 1;">
@@ -54,14 +55,14 @@
                     achievements, and advance together.</p>
             </div>
             <div style="flex: 1;">
-                <img src="/stud.jpg" alt="Image 2"
+                <img src="/images/stud.jpg" alt="Image 2"
                     style="width: 80%; border-radius: 10%;">
             </div>
         </div>
 
         <div class="box_ind">
             <div style="flex: 0 0 40%;">
-                <img src="/me.jpg" alt="Image 3"
+                <img src="/images/me.jpg" alt="Image 3"
                     style="width: 60%; border-radius: 10%;">
             </div>
             <div style="flex: 1;">
@@ -79,39 +80,13 @@
         </div>
     </div>
 
-    <div class="tooltip" id="resourcesTooltip">Log in to access feature</div>
-    
-    <script>
-        // Assume you have a variable isLoggedIn that is true if the user is logged in, false otherwise
-        const isLoggedIn = false; // Replace this with your actual login status check
-    
- // Function to show tooltip on hover
-function showTooltip(id) {
-    const tooltip = document.getElementById(id);
-    tooltip.style.visibility = 'visible';
-
-    // If the user is not logged in, show the tooltip message
-    if (!isLoggedIn) {
-        tooltip.innerText = 'Log in to access feature';
-    }
-}
-
-// Function to hide tooltip on hover out
-function hideTooltip(id) {
-    const tooltip = document.getElementById(id);
-    tooltip.style.visibility = 'hidden';
-
-    // Reset the tooltip text
-    tooltip.innerText = '';
-}
-    </script>
 
     <footer>
         <div class="left-footer">
             <a href="guest.html">Home</a>
         </div>
 
-        <img src="/logo.png" alt="Logo" style="height: 60px; width: 60px; border-radius: 10%;">
+        <img src="/images/logo.png" alt="Logo" style="height: 60px; width: 60px; border-radius: 10%;">
         <p>&copy; 2023 ALC-Connect. All rights reserved.</p>
     </footer>
 

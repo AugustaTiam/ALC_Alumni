@@ -162,7 +162,7 @@ function submitEditEventForm() {
         body: JSON.stringify(editFormData),
     })
         .then(response => {
-            window.location.reload()
+            window.location.href='/adminDashboard'
         })
         .catch(error => {
             console.error('Error updating event:', error);

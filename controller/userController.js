@@ -43,7 +43,7 @@ exports.updateUser = async (req, res) => {
     const { userName, location, yearGroup } = req.body;
 
     // Find the user by ID and update the details
-    const updatedUser = await UserSign.findByIdAndUpdate(
+    const updatedUser = await UserSign.findById(userId)(
       userId,
       { userName, location, yearGroup },
       { new: true } // Return the updated user
